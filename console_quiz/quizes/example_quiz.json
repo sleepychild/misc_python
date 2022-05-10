@@ -1,0 +1,32 @@
+{
+    "quiz_name": "Big Quiz",
+    "quiz_description": "A very big description for the quiz.",
+    "quiz_questions": [
+        {
+            "question_type": "Yorn",
+            "question": "Is python super Awesome",
+            "question_prompt": "Yes / No: ",
+            "answer": "y",
+            "points": 10,
+            "options": {}
+        },{
+            "question_type": "Open",
+            "question": "How much wood could a wood chuck...",
+            "question_prompt": "Type Answer: ",
+            "answer": "chuck",
+            "points": 5,
+            "options": {}
+        },{
+            "question_type": "Closed",
+            "question": "What is the language",
+            "question_prompt": "Enter option: ",
+            "answer": "c",
+            "points": 2,
+            "options": {
+                "a": "Python",
+                "b": "Python2.7",
+                "c": "Python latest"
+            }
+        }
+    ]
+}
