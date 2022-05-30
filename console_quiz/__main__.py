@@ -8,7 +8,7 @@ def select_quiz() -> str:
     print("Select quiz")
     for k, q in enumerate(quizes):
         print(f"{k}: {q.name}")
-    print("press any key to quit")
+    print("invalid input quits")
     try:
         return quizes[int(input("Enter quiz number: "))].path
     except (
