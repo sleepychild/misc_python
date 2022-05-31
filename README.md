@@ -22,9 +22,13 @@ Nearly the entire logic can be done by a single class. The only method required 
 
 On kongregate I "play" (play in quotes because it can hardly be called gameplay) an idle / upgrades garbo game called [Infinite Cosmos](https://www.kongregate.com/games/GoldhurstGames/infinite-cosmos). It wastes my time and I want to automate it.
 
+I use [pyautogui](https://github.com/asweigart/pyautogui) to find game elements on the screen based on images cut from screenshots.
+
 Run it with:
 ```bash
 python infinite_cosmos
 ```
 
-... Some more doc needed here
+When asked to place the mouse in the top left and bottom right just move the mouse accordingly and press Enter. Then don't move the game around.
+
+Keep the upgrading mode on `max`. Sometimes it misses holo coins. Otherwise it kind of works. Not that you would want to use it or play the game or anything.

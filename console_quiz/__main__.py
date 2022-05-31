@@ -3,8 +3,11 @@ from typing import List
 
 from quiz import Quiz
 
+
 def select_quiz() -> str:
-    quizes: List[DirEntry] = list(filter(lambda x: x.is_file(), scandir("console_quiz/quizes")))
+    quizes: List[DirEntry] = list(
+        filter(lambda x: x.is_file(), scandir("console_quiz/quizes"))
+    )
     print("Select quiz")
     for k, q in enumerate(quizes):
         print(f"{k}: {q.name}")

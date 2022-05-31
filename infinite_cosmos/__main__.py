@@ -60,27 +60,29 @@ class GameAutomator:
             confidence=0.6,
             region=self.game_rect,
         )
+        print(f"BREAKTHROUGH: {breakthrough}")
         if not breakthrough == None:
-            pyautogui.click(*breakthrough, clicks=300, interval=0.05)
+            pyautogui.click(*breakthrough, clicks=400, interval=0.05)
 
     def upgrade(self) -> None:
         for up in self.upgrades:
+            print(f"UPGRADE CLICK AT X: {up.x} Y: {up.y}")
             up.click()
 
     def holo_blue(self) -> None:
         holo_blue_a = pyautogui.locateCenterOnScreen(
             HOLO_BLUE_A_IMAGE_PATH,
-            grayscale=True,
-            confidence=0.6,
+            grayscale=False,
+            confidence=0.4,
             region=self.game_rect,
         )
         holo_blue_b = pyautogui.locateCenterOnScreen(
             HOLO_BLUE_B_IMAGE_PATH,
-            grayscale=True,
-            confidence=0.6,
+            grayscale=False,
+            confidence=0.4,
             region=self.game_rect,
         )
-        print(f"HB A: {holo_blue_a} HB B: {holo_blue_b}")
+        print(f"HOLO A: {holo_blue_a} HOLO B: {holo_blue_b}")
         if not holo_blue_a == None:
             pyautogui.click(*holo_blue_a)
         if not holo_blue_b == None:
@@ -100,7 +102,7 @@ class GameAutomator:
             sleep(5)
 
     def _sigint_handler(self, signal, frame) -> None:
-        print(signal, frame)
+        print(f" SIGNAL: {signal} FRAME: {frame}")
         self.running = False
 
 

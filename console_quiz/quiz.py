@@ -1,4 +1,3 @@
-from functools import reduce
 from os import path
 import json
 
@@ -6,8 +5,8 @@ from typing import Any, Dict, List
 
 import question
 
-class Quiz:
 
+class Quiz:
     def __init__(self, name: str, description: str, questions: List[Dict]) -> None:
         self.name: str = name
         self.description: str = description
